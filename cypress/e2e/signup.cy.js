@@ -22,7 +22,7 @@ describe('Sign up', () => {
         cy.url().should('include', '/#/register');
 
         cy.get('.auth-page').as('registerPage');
-        cy.get('@registerPage').find('h1').should('have.text', 'Sign up');
+        cy.get('@registerPage2').find('h1').should('have.text', 'Sign up');
         cy.get('@registerPage').find('form').should('be.visible').as('signupForm');
         cy.get('@signupForm').find('input[name=username]').type('test');
         cy.get('@signupForm').find('input[name=email]').type('test@test.com');
